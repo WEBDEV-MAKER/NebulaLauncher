@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>404 - Not Found</title>
+
+<style>
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: white;
+  font-family: Consolas, monospace;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+h1 {
+  font-size: 90px;
+  margin: 0;
+  color: #00ffcc;
+  animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 2px red; }
+  25% { text-shadow: -2px -2px blue; }
+  50% { text-shadow: 2px -2px lime; }
+  75% { text-shadow: -2px 2px purple; }
+  100% { text-shadow: 2px 2px red; }
+}
+
+p {
+  font-size: 18px;
+  color: #aaa;
+}
+
+.buttons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  transition: 0.2s;
+}
+
+.minecraft { background: #3c8527; }
+.dev { background: #007acc; }
+
+.buttons a:hover {
+  transform: scale(1.1);
+}
+
+.ide-box {
+  margin-top: 30px;
+  background: #111;
+  border: 1px solid #333;
+  padding: 15px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
+.gd-bar {
+  width: 300px;
+  height: 10px;
+  background: #222;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.gd-progress {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #00ffcc, #00aaff);
+  animation: progress 4s linear infinite;
+}
+
+@keyframes progress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+.steve {
+  width: 80px;
+  height: 80px;
+  background: url("https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png");
+  background-size: cover;
+  margin: 20px auto;
+  image-rendering: pixelated;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="steve"></div>
+
+  <h1>404</h1>
+
+  <p>Sorry, we could not find this page.</p>
+
+  <p>
+    Try going to the minecraft server page or go to my developer page.
+  </p>
+
+  <div class="buttons">
+    <a class="minecraft" href="https://lowframe.site">Minecraft Server</a>
+    <a class="dev" href="https://dwaynethedev.lowframe.site">Developer Page</a>
+  </div>
+
+  <div class="gd-bar">
+    <div class="gd-progress"></div>
+  </div>
+
+  <div class="ide-box">
+<pre>
+> Running build...
+
+[ERROR] PageNotFoundException
+File: /this-page-does-not-exist
+
+Suggestion:
+- Check URL
+- Recompile brain
+- Touch grass
+
+Status: FAILED
+</pre>
+  </div>
+
+</div>
+
+</body>
+</html>
