@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nebula Launcher</title>
 
 <style>
@@ -11,18 +11,17 @@
         font-family: Arial, sans-serif;
         background: radial-gradient(circle at top, #1a1f3c, #05060a);
         color: white;
-        overflow-x: hidden;
     }
 
     header {
-        padding: 40px;
         text-align: center;
+        padding: 60px 20px 30px;
     }
 
     h1 {
         font-size: 3rem;
         margin: 0;
-        letter-spacing: 2px;
+        text-shadow: 0 0 20px #5b6cff;
     }
 
     .tagline {
@@ -30,20 +29,30 @@
         margin-top: 10px;
     }
 
-    .hero {
-        text-align: center;
-        padding: 60px 20px;
+    .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .card {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.1);
+        padding: 20px;
+        border-radius: 15px;
+        margin: 15px 0;
     }
 
     .btn {
         display: inline-block;
-        margin: 10px;
-        padding: 12px 20px;
+        padding: 12px 18px;
+        margin: 10px 5px;
         background: #5b6cff;
         color: white;
         border-radius: 10px;
         text-decoration: none;
         transition: 0.2s;
+        font-weight: bold;
     }
 
     .btn:hover {
@@ -51,103 +60,83 @@
         transform: scale(1.05);
     }
 
-    .section {
-        max-width: 900px;
-        margin: auto;
-        padding: 40px 20px;
-    }
-
-    .card {
-        background: rgba(255,255,255,0.05);
-        padding: 20px;
-        border-radius: 15px;
-        margin-top: 15px;
-        border: 1px solid rgba(255,255,255,0.1);
+    .danger {
+        background: #ff4d4d;
     }
 
     footer {
         text-align: center;
         padding: 30px;
+        color: #666;
         font-size: 0.9rem;
-        color: #777;
     }
 
-    .glow {
-        text-shadow: 0 0 15px #5b6cff;
+    .version {
+        color: #7b89ff;
+        font-size: 0.9rem;
     }
 </style>
-
 </head>
 
 <body>
 
 <header>
-    <h1 class="glow">Nebula Launcher</h1>
-    <div class="tagline">A lightweight Minecraft launcher that connects directly to the vanilla game launcher</div>
+    <h1>Nebula Launcher</h1>
+    <div class="tagline">
+        A lightweight Minecraft launcher that connects directly to the vanilla launcher
+    </div>
+    <div class="version">Version 1.0.0 • Alpha Release</div>
 </header>
 
-<div class="hero">
-    <a class="btn" href="#download">Download</a>
-    <a class="btn" href="#features">Features</a>
-    <a class="btn" href="#how">How It Works</a>
-</div>
-
-<div class="section" id="features">
-    <h2>Features</h2>
+<div class="container">
 
     <div class="card">
-        ⚡ Direct integration with the official Minecraft launcher
-    </div>
+        <h2>Download Nebula</h2>
+        <p>Install Nebula Launcher for Windows and connect directly to the official Minecraft launcher.</p>
 
-    <div class="card">
-        🧩 Auto-detects installed Minecraft versions
-    </div>
-
-    <div class="card">
-        🛠 Simple mod profile switching system
-    </div>
-
-    <div class="card">
-        🚀 Fast startup, minimal overhead
-    </div>
-</div>
-
-<div class="section" id="how">
-    <h2>How It Works</h2>
-
-    <div class="card">
-        Nebula Launcher does NOT replace Minecraft.
-        It acts as a control layer that opens and configures the official Mojang launcher automatically.
-    </div>
-
-    <div class="card">
-        When you launch a profile, Nebula:
-        <br><br>
-        1. Reads your Minecraft installation<br>
-        2. Applies selected mod configuration<br>
-        3. Opens the vanilla launcher with arguments<br>
-        4. Lets Minecraft handle the rest
-    </div>
-</div>
-
-<div class="section" id="download">
-    <h2>Download</h2>
-
-    <div class="card">
-        <p>Current build: <b>v0.1-alpha</b></p>
-
-        <a class="btn" href="#" onclick="alert('Replace this with your download link (.exe or .jar)')">
-            Download for Windows
+        <a class="btn" href="https://github.com/WEBDEV-MAKER/NebulaLauncher/releases/download/0.1/Nebula.Launcher.1.0.0.msi">
+            ⬇ Download MSI Installer
         </a>
 
-        <a class="btn" href="#" onclick="alert('Mac/Linux build coming soon')">
-            Other Platforms
+        <a class="btn danger" href="#how">
+            How it works
         </a>
     </div>
+
+    <div class="card">
+        <h2>What Nebula Does</h2>
+        <p>
+            Nebula Launcher does NOT replace Minecraft. It acts as a control layer that:
+        </p>
+        <ul>
+            <li>Detects your installed Minecraft launcher</li>
+            <li>Launches vanilla Minecraft automatically</li>
+            <li>Applies mod profiles (planned feature)</li>
+            <li>Keeps everything lightweight and fast</li>
+        </ul>
+    </div>
+
+    <div class="card" id="how">
+        <h2>How It Works</h2>
+        <ol>
+            <li>Install Nebula Launcher (.msi)</li>
+            <li>Open the app</li>
+            <li>Select Minecraft version/profile</li>
+            <li>Click Play → it opens vanilla launcher</li>
+        </ol>
+    </div>
+
+    <div class="card">
+        <h2>Important</h2>
+        <p>
+            Nebula does not modify Minecraft files directly. It simply launches and configures the official launcher.
+        </p>
+    </div>
+
 </div>
 
 <footer>
-    Nebula Launcher © 2026 • Built for Minecraft modding workflow simplicity
+    Nebula Launcher © 2026 • WEBDEV-MAKER Project
 </footer>
 
 </body>
