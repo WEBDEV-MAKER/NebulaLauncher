@@ -15,42 +15,50 @@
 
     header {
         text-align: center;
-        padding: 60px 20px 30px;
+        padding: 70px 20px 30px;
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: 3.2rem;
         margin: 0;
-        text-shadow: 0 0 20px #5b6cff;
+        text-shadow: 0 0 25px #5b6cff;
+        letter-spacing: 2px;
     }
 
     .tagline {
         color: #9aa4ff;
         margin-top: 10px;
+        font-size: 1rem;
     }
 
     .container {
-        max-width: 900px;
+        max-width: 950px;
         margin: auto;
         padding: 20px;
     }
 
     .section {
-        margin-bottom: 30px;
+        margin-bottom: 35px;
     }
 
     .card {
         background: rgba(255,255,255,0.05);
-        border: 1px solid rgba(255,255,255,0.1);
-        padding: 20px;
-        border-radius: 15px;
+        border: 1px solid rgba(255,255,255,0.12);
+        padding: 22px;
+        border-radius: 16px;
         margin-top: 15px;
+        backdrop-filter: blur(6px);
+    }
+
+    .card h3 {
+        margin-top: 0;
+        color: #cfd6ff;
     }
 
     .btn {
         display: inline-block;
         padding: 12px 18px;
-        margin: 10px 5px 0 0;
+        margin: 10px 8px 0 0;
         background: #5b6cff;
         color: white;
         border-radius: 10px;
@@ -61,36 +69,41 @@
 
     .btn:hover {
         background: #7b89ff;
-        transform: scale(1.05);
+        transform: translateY(-2px);
+    }
+
+    .btn.danger {
+        background: #ff4d4d;
+    }
+
+    .btn.danger:hover {
+        background: #ff6666;
     }
 
     .warning {
+        margin-top: 10px;
         color: #ffcc66;
         font-size: 0.9rem;
-        margin-top: 10px;
     }
 
-    .danger {
-        background: #ff4d4d;
+    .pill {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        margin-left: 8px;
+        background: rgba(255,255,255,0.1);
+        color: #9aa4ff;
     }
 
     footer {
         text-align: center;
-        padding: 30px;
+        padding: 40px;
         color: #666;
         font-size: 0.9rem;
     }
 
-    .version {
-        color: #7b89ff;
-        font-size: 0.9rem;
-    }
-
-    h2 {
-        margin-top: 0;
-    }
 </style>
-
 </head>
 
 <body>
@@ -98,101 +111,85 @@
 <header>
     <h1>Nebula Launcher</h1>
     <div class="tagline">
-        A lightweight Minecraft launcher that connects directly to the vanilla launcher
+        Lightweight Minecraft launcher that connects directly to the vanilla launcher
     </div>
-    <div class="version">Version 0.2 Release Cycle</div>
 </header>
 
 <div class="container">
 
-<!-- DOWNLOAD -->
-<div class="section" id="download">
-    <h2>Latest Releases</h2>
+<!-- LATEST -->
+<div class="section">
+    <h2>Latest Release</h2>
 
     <div class="card">
-        <h3>0.2 Release (Stable)</h3>
+        <h3>0.2-release <span class="pill">Stable</span></h3>
 
         <a class="btn" href="https://github.com/WEBDEV-MAKER/NebulaLauncher/releases/download/0.2-release/Nebula.Launcher.0.2.0.msi">
-            ⬇ Download MSI (0.2-release)
+            ⬇ Download MSI
         </a>
 
         <a class="btn" href="https://github.com/WEBDEV-MAKER/NebulaLauncher/releases/download/0.2-release/Nebula.Launcher.Setup.0.2.0.exe">
-            ⚡ Download EXE (0.2-release)
+            ⚡ Download EXE
         </a>
     </div>
+</div>
+
+<!-- PRERELEASE -->
+<div class="section">
+    <h2>Testing Builds</h2>
 
     <div class="card">
-        <h3>0.2 Prerelease (Testing)</h3>
+        <h3>0.2-prerelease <span class="pill">Experimental</span></h3>
 
         <a class="btn" href="https://github.com/WEBDEV-MAKER/NebulaLauncher/releases/download/0.2-prerelease/Nebula.Launcher.Setup.1.0.0.exe">
-            ⚡ Download EXE (0.2-prerelease)
+            ⚠ Download Prerelease EXE
         </a>
 
         <div class="warning">
-            ⚠ Pre-release: unstable, experimental features
+            This build may contain bugs, missing features, or unstable behavior.
         </div>
-    </div>
-
-    <div class="card">
-        <h3>0.1 Release (Legacy)</h3>
-
-        <a class="btn" href="https://github.com/WEBDEV-MAKER/NebulaLauncher/releases/download/0.1/Nebula.Launcher.1.0.0.msi">
-            ⬇ Download MSI (0.1)
-        </a>
     </div>
 </div>
 
 <!-- OLD VERSIONS -->
-<div class="section" id="old">
+<div class="section">
     <h2>Old Versions</h2>
 
     <div class="card">
-        <p>You can download older builds for testing or rollback:</p>
+        <h3>0.1-release <span class="pill">Legacy</span></h3>
 
         <a class="btn danger" href="https://github.com/WEBDEV-MAKER/NebulaLauncher/releases/download/0.1/Nebula.Launcher.1.0.0.msi">
-            0.1-release (MSI)
-        </a>
-
-        <a class="btn danger" href="https://github.com/WEBDEV-MAKER/NebulaLauncher/releases/download/0.2-prerelease/Nebula.Launcher.Setup.1.0.0.exe">
-            0.2-prerelease (EXE)
-        </a>
-
-        <a class="btn danger" href="https://github.com/WEBDEV-MAKER/NebulaLauncher/releases/download/0.2-release/Nebula.Launcher.0.2.0.msi">
-            0.2-release (MSI)
-        </a>
-
-        <a class="btn danger" href="https://github.com/WEBDEV-MAKER/NebulaLauncher/releases/download/0.2-release/Nebula.Launcher.Setup.0.2.0.exe">
-            0.2-release (EXE)
+            ⬇ Download Legacy MSI
         </a>
     </div>
 </div>
 
-<!-- INFO -->
+<!-- ABOUT -->
 <div class="section">
-    <h2>What Nebula Launcher Does</h2>
+    <h2>What is Nebula Launcher?</h2>
 
     <div class="card">
-        Nebula Launcher is a lightweight control layer for Minecraft.
-        It does NOT replace the vanilla launcher.
+        Nebula Launcher is a lightweight control layer for Minecraft that works with the official Mojang launcher.
+        <br><br>
+        It does NOT replace Minecraft — it enhances how you launch it.
+        <br><br>
 
-        <ul>
-            <li>Detects installed Minecraft launcher</li>
-            <li>Launches vanilla Minecraft automatically</li>
-            <li>Supports future mod profiles</li>
-            <li>Designed to stay extremely lightweight</li>
-        </ul>
+        ✔ Detects installed Minecraft launcher<br>
+        ✔ Launches vanilla Minecraft automatically<br>
+        ✔ Prepares future mod profiles<br>
+        ✔ Minimal performance impact
     </div>
 </div>
 
-<!-- HOW IT WORKS -->
+<!-- HOW -->
 <div class="section">
     <h2>How It Works</h2>
 
     <div class="card">
         1. Install Nebula Launcher<br>
         2. Open the app<br>
-        3. Choose version/profile<br>
-        4. Click Play → opens official Minecraft launcher
+        3. Select version or profile<br>
+        4. Click Play → launches official Minecraft launcher
     </div>
 </div>
 
