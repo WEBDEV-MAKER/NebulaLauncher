@@ -70,6 +70,10 @@
         margin-top: 10px;
     }
 
+    .danger {
+        background: #ff4d4d;
+    }
+
     footer {
         text-align: center;
         padding: 30px;
@@ -80,6 +84,10 @@
     .version {
         color: #7b89ff;
         font-size: 0.9rem;
+    }
+
+    h2 {
+        margin-top: 0;
     }
 </style>
 
@@ -92,72 +100,101 @@
     <div class="tagline">
         A lightweight Minecraft launcher that connects directly to the vanilla launcher
     </div>
-    <div class="version">Version 1.0.0 • Alpha Project</div>
+    <div class="version">Version 0.2 Release Cycle</div>
 </header>
 
 <div class="container">
 
-    <!-- DOWNLOAD -->
-    <div class="section" id="download">
-        <h2>Download</h2>
+<!-- DOWNLOAD -->
+<div class="section" id="download">
+    <h2>Latest Releases</h2>
 
-        <div class="card">
-            <h3>Stable Release</h3>
-            <p>v0.1-alpha (recommended)</p>
+    <div class="card">
+        <h3>0.2 Release (Stable)</h3>
 
-            <a class="btn" href="https://github.com/WEBDEV-MAKER/NebulaLauncher/releases/download/0.1/Nebula.Launcher.1.0.0.msi">
-                ⬇ Download MSI Installer
-            </a>
-        </div>
+        <a class="btn" href="https://github.com/WEBDEV-MAKER/NebulaLauncher/releases/download/0.2-release/Nebula.Launcher.0.2.0.msi">
+            ⬇ Download MSI (0.2-release)
+        </a>
 
-        <div class="card">
-            <h3>Pre-release Build</h3>
-            <p>v0.2-prerelease (testing)</p>
+        <a class="btn" href="https://github.com/WEBDEV-MAKER/NebulaLauncher/releases/download/0.2-release/Nebula.Launcher.Setup.0.2.0.exe">
+            ⚡ Download EXE (0.2-release)
+        </a>
+    </div>
 
-            <a class="btn" href="https://github.com/WEBDEV-MAKER/NebulaLauncher/releases/download/0.2-prerelease/Nebula.Launcher.Setup.1.0.0.exe">
-                ⚡ Download EXE Installer
-            </a>
+    <div class="card">
+        <h3>0.2 Prerelease (Testing)</h3>
 
-            <div class="warning">
-                ⚠ This is a pre-release build. Expect bugs, missing features, or instability.
-            </div>
+        <a class="btn" href="https://github.com/WEBDEV-MAKER/NebulaLauncher/releases/download/0.2-prerelease/Nebula.Launcher.Setup.1.0.0.exe">
+            ⚡ Download EXE (0.2-prerelease)
+        </a>
+
+        <div class="warning">
+            ⚠ Pre-release: unstable, experimental features
         </div>
     </div>
 
-    <!-- WHAT IT IS -->
-    <div class="section">
-        <h2>What Nebula Launcher Does</h2>
+    <div class="card">
+        <h3>0.1 Release (Legacy)</h3>
 
-        <div class="card">
-            Nebula Launcher does NOT replace Minecraft. It acts as a lightweight control layer that:
-            <ul>
-                <li>Detects installed Minecraft launcher</li>
-                <li>Launches vanilla Minecraft automatically</li>
-                <li>Prepares mod profiles (future feature)</li>
-                <li>Keeps performance extremely lightweight</li>
-            </ul>
-        </div>
+        <a class="btn" href="https://github.com/WEBDEV-MAKER/NebulaLauncher/releases/download/0.1/Nebula.Launcher.1.0.0.msi">
+            ⬇ Download MSI (0.1)
+        </a>
     </div>
+</div>
 
-    <!-- HOW IT WORKS -->
-    <div class="section">
-        <h2>How It Works</h2>
+<!-- OLD VERSIONS -->
+<div class="section" id="old">
+    <h2>Old Versions</h2>
 
-        <div class="card">
-            1. Install Nebula Launcher<br>
-            2. Open the app<br>
-            3. Select your Minecraft setup<br>
-            4. Click Play → launches official Minecraft launcher
-        </div>
+    <div class="card">
+        <p>You can download older builds for testing or rollback:</p>
+
+        <a class="btn danger" href="https://github.com/WEBDEV-MAKER/NebulaLauncher/releases/download/0.1/Nebula.Launcher.1.0.0.msi">
+            0.1-release (MSI)
+        </a>
+
+        <a class="btn danger" href="https://github.com/WEBDEV-MAKER/NebulaLauncher/releases/download/0.2-prerelease/Nebula.Launcher.Setup.1.0.0.exe">
+            0.2-prerelease (EXE)
+        </a>
+
+        <a class="btn danger" href="https://github.com/WEBDEV-MAKER/NebulaLauncher/releases/download/0.2-release/Nebula.Launcher.0.2.0.msi">
+            0.2-release (MSI)
+        </a>
+
+        <a class="btn danger" href="https://github.com/WEBDEV-MAKER/NebulaLauncher/releases/download/0.2-release/Nebula.Launcher.Setup.0.2.0.exe">
+            0.2-release (EXE)
+        </a>
     </div>
+</div>
 
-    <!-- WARNING -->
-    <div class="section">
-        <div class="card">
-            <strong>Important:</strong><br>
-            Nebula does not modify Minecraft files. It simply launches and configures the official launcher environment.
-        </div>
+<!-- INFO -->
+<div class="section">
+    <h2>What Nebula Launcher Does</h2>
+
+    <div class="card">
+        Nebula Launcher is a lightweight control layer for Minecraft.
+        It does NOT replace the vanilla launcher.
+
+        <ul>
+            <li>Detects installed Minecraft launcher</li>
+            <li>Launches vanilla Minecraft automatically</li>
+            <li>Supports future mod profiles</li>
+            <li>Designed to stay extremely lightweight</li>
+        </ul>
     </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="section">
+    <h2>How It Works</h2>
+
+    <div class="card">
+        1. Install Nebula Launcher<br>
+        2. Open the app<br>
+        3. Choose version/profile<br>
+        4. Click Play → opens official Minecraft launcher
+    </div>
+</div>
 
 </div>
 
